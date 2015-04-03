@@ -42,7 +42,7 @@ mod = Extension( '_pydmtx',
                )
 
 setup(name = 'pydmtx',
-      version = '0.7.4',    # Sync with libdmtx
+      version = '0.7.4b1',
       description = 'A thin wrapper around libdmtx',
       py_modules = ['pydmtx'],
       ext_modules = [mod],
