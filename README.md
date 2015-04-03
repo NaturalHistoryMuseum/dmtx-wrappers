@@ -17,7 +17,8 @@ This Visual Studio project was created by following Python's instructions for
 [Building C and C++ Extensions on Windows](https://docs.python.org/2/extending/windows.html)
 and [instructions on libdmtx wiki](http://libdmtx.wikidot.com/libdmtx-python-wrapper).
 
-1. Build the 32-bit or 64-bit Release target of [libdmtx](https://github.com/NaturalHistoryMuseum/)
+1. Build the 32-bit or 64-bit Release target of
+[libdmtx](https://github.com/NaturalHistoryMuseum/libdmtx/)
 
 2. Install the current Python 2.7 release of [Anaconda](https://store.continuum.io/cshop/anaconda/)
 
