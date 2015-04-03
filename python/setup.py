@@ -19,16 +19,32 @@
 
 # $Id$
 
-from distutils.core import setup, Extension
+import os
+import platform
+import shutil
+
+from setuptools import setup, Extension
+
+LIBDMTX = '../../libdmtx/'
+
+if '64bit' == platform.architecture()[0]:
+    LIBDMTX_DLL_DIR = os.path.join(LIBDMTX, 'x64', 'Release')
+else:
+    LIBDMTX_DLL_DIR = os.path.join(LIBDMTX, 'Win32', 'Release')
+
+shutil.copy(os.path.join(LIBDMTX_DLL_DIR, 'libdmtx.dll'), '.')
 
 mod = Extension( '_pydmtx',
-                 include_dirs = ['/usr/local/include'],
-                 library_dirs = ['/usr/local/lib'],
-                 libraries = ['dmtx'],
-                 sources = ['pydmtxmodule.c'] )
+                 include_dirs = [LIBDMTX],
+                 library_dirs = [LIBDMTX_DLL_DIR],
+                 libraries = ['libdmtx'],
+                 sources = ['pydmtxmodule.c']
+               )
 
-setup( name = 'pydmtx',
-       version = '0.1',
-       description = 'A thin wrapper around libdmtx',
-       py_modules = ['pydmtx'],
-       ext_modules = [mod] )
+setup(name = 'pydmtx',
+      version = '0.7.4',    # Sync with libdmtx
+      description = 'A thin wrapper around libdmtx',
+      py_modules = ['pydmtx'],
+      ext_modules = [mod],
+      data_files = [('', ['libdmtx.dll'])],
+     )

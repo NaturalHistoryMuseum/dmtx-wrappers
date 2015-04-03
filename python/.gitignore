@@ -1,0 +1,6 @@
+*whl
+build
+dist
+libdmtx.dll
+hello.png
+pydmtx.egg-info/
