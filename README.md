@@ -1,8 +1,8 @@
 # dmtx-wrapper
 
-Visual Studio solution for 32-bit and 64-bit builds of the pydmtx Python package.
-Tested with [Anaconda](http://www.continuum.io/) distribution of Python 2.7.x
-and Visual Studio Community 2013.
+Visual Studio solution for 32-bit and 64-bit builds of the `pydmtx` Python
+package. Tested with [Anaconda](http://www.continuum.io/) distribution of
+Python 2.7.x and Visual Studio Community 2013.
 
 Forked from [http://sourceforge.net/p/libdmtx/libdmtx/ci/master/tree/](http://sourceforge.net/p/libdmtx/libdmtx/ci/master/tree/)
 on 2015-04-03.
@@ -28,4 +28,4 @@ Build pydmtx
     pip install --upgrade setuptools
     pip install wheel
     build.bat
-    pip install dist/<pydmtx-<whatever>.whl>
+    pip install dist/pydmtx-<whatever>.whl
