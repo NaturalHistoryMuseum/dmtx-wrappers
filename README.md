@@ -28,4 +28,4 @@ Build pydmtx
     pip install --upgrade setuptools
     pip install wheel
     build.bat
-    pip install dist/pydmtx-<whatever>.whl
+    pip install dist\pydmtx-<whatever>.whl
