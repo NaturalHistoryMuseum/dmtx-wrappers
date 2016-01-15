@@ -22,6 +22,7 @@
 import os
 import platform
 import shutil
+import sys
 
 from setuptools import setup, Extension
 
@@ -32,7 +33,8 @@ if '64bit' == platform.architecture()[0]:
 else:
     LIBDMTX_DLL_DIR = os.path.join(LIBDMTX, 'Win32', 'Release')
 
-shutil.copy(os.path.join(LIBDMTX_DLL_DIR, 'libdmtx.dll'), '.')
+if 'bdist' in sys.argv:
+    shutil.copy(os.path.join(LIBDMTX_DLL_DIR, 'libdmtx.dll'), '.')
 
 mod = Extension( '_pydmtx',
                  include_dirs = [LIBDMTX],
