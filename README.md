@@ -39,7 +39,7 @@ and [instructions on libdmtx wiki](http://libdmtx.wikidot.com/libdmtx-python-wra
 
 * Install Visual C++ 2013 Community Edition
 
-* Build the 32-bit and/or 64-bit Release target of [libdmtx](https://github.com/NaturalHistoryMuseum/libdmtx/)
+* Build the 32-bit and/or 64-bit Release target of [libdmtx-windows](https://github.com/NaturalHistoryMuseum/libdmtx-windows/)
 
 * Install the current Python 2.7 release of [Anaconda](https://store.continuum.io/cshop/anaconda/)
 
